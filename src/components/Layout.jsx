@@ -158,12 +158,29 @@ function Navbar({ role, setRole, searchQuery, setSearchQuery, notifications, onN
 function Layout({ role, setRole, mockData }) {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const notifications = [
-    { id: 1, message: 'Teacher approved your dispute on Math worksheet', time: '2 min ago', unread: true },
-    { id: 2, message: 'New worksheet "Physics Fundamentals" assigned', time: '1 hour ago', unread: true },
-    { id: 3, message: 'Your submission for Biology has been graded', time: '3 hours ago', unread: false },
-    { id: 4, message: 'Admin updated the AI model settings', time: '1 day ago', unread: false }
-  ];
+  // Role-specific notifications
+  const allNotifications = {
+    teacher: [
+      { id: 1, message: 'New student submission received for "Algebra Basics"', time: '5 min ago', unread: true },
+      { id: 2, message: 'Dispute filed on Physics worksheet grading', time: '1 hour ago', unread: true },
+      { id: 3, message: 'AI model performance report is ready', time: '2 hours ago', unread: false },
+      { id: 4, message: 'Admin updated system-wide grading settings', time: '1 day ago', unread: false }
+    ],
+    student: [
+      { id: 1, message: 'Teacher approved your dispute on Math worksheet', time: '2 min ago', unread: true },
+      { id: 2, message: 'New worksheet "Physics Fundamentals" assigned', time: '1 hour ago', unread: true },
+      { id: 3, message: 'Your submission for Biology has been graded', time: '3 hours ago', unread: false },
+      { id: 4, message: 'AI feedback available for Chemistry assignment', time: '5 hours ago', unread: false }
+    ],
+    admin: [
+      { id: 1, message: 'System performance alert: High dispute rate detected', time: '10 min ago', unread: true },
+      { id: 2, message: 'New teacher report submitted for review', time: '30 min ago', unread: true },
+      { id: 3, message: 'Monthly usage report generated', time: '2 hours ago', unread: false },
+      { id: 4, message: 'AI model GPT-4o performance updated', time: '1 day ago', unread: false }
+    ]
+  };
+
+  const notifications = allNotifications[role] || [];
 
   const dashboardTitles = {
     teacher: { title: 'Teacher Dashboard', desc: 'Manage worksheets, review submissions, and handle disputes' },
