@@ -162,13 +162,13 @@ function Layout({ role, setRole, mockData }) {
   const allNotifications = {
     teacher: [
       { id: 1, message: 'New student submission received for "Algebra Basics"', time: '5 min ago', unread: true },
-      { id: 2, message: 'Dispute filed on Physics worksheet grading', time: '1 hour ago', unread: true },
+      { id: 2, message: 'Dispute filed on Physics assignment grading', time: '1 hour ago', unread: true },
       { id: 3, message: 'AI model performance report is ready', time: '2 hours ago', unread: false },
       { id: 4, message: 'Admin updated system-wide grading settings', time: '1 day ago', unread: false }
     ],
     student: [
-      { id: 1, message: 'Teacher approved your dispute on Math worksheet', time: '2 min ago', unread: true },
-      { id: 2, message: 'New worksheet "Physics Fundamentals" assigned', time: '1 hour ago', unread: true },
+      { id: 1, message: 'Teacher approved your dispute on Math assignment', time: '2 min ago', unread: true },
+      { id: 2, message: 'New assignment "Physics Fundamentals" assigned', time: '1 hour ago', unread: true },
       { id: 3, message: 'Your submission for Biology has been graded', time: '3 hours ago', unread: false },
       { id: 4, message: 'AI feedback available for Chemistry assignment', time: '5 hours ago', unread: false }
     ],
@@ -183,7 +183,7 @@ function Layout({ role, setRole, mockData }) {
   const notifications = allNotifications[role] || [];
 
   const dashboardTitles = {
-    teacher: { title: 'Teacher Dashboard', desc: 'Manage worksheets, review submissions, and handle disputes' },
+    teacher: { title: 'Teacher Dashboard', desc: 'Manage assignments, review submissions, and handle disputes' },
     student: { title: 'Student Dashboard', desc: 'Submit assignments, track progress, and learn with AI' },
     admin: { title: 'Admin Dashboard', desc: 'Monitor system performance and manage AI models' }
   };
@@ -221,7 +221,7 @@ function Layout({ role, setRole, mockData }) {
           ) : role === 'student' ? (
             <StudentPanel
               worksheets={mockData.worksheets}
-              submissions={mockData.getSubmissionsForRole('student')}
+              submissions={mockData.getSubmissionsForRole('student', 'Nafees')}
               addSubmission={mockData.addSubmission}
               disputeSubmission={mockData.disputeSubmission}
               curriculum={mockData.curriculum}

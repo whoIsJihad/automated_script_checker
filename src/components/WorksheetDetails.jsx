@@ -225,12 +225,12 @@ function WorksheetDetails({ worksheet, submissions, isOpen, onClose, role }) {
           <Card className="p-6">
             <h3 className="font-semibold text-slate-900 mb-4">Your Submission</h3>
             {(() => {
-              const studentSubmission = worksheetSubmissions.find(sub => sub.studentName === 'Alice'); // Assuming Alice is current student
+              const studentSubmission = worksheetSubmissions.find(sub => sub.studentName === 'Nafees'); // Current student is Nafees
               if (!studentSubmission) {
                 return (
                   <div className="text-center py-8">
                     <FileText size={48} className="text-slate-400 mx-auto mb-4" />
-                    <p className="text-slate-600">You haven't submitted this worksheet yet.</p>
+                    <p className="text-slate-600">You haven't submitted this assignment yet.</p>
                   </div>
                 );
               }

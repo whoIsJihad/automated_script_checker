@@ -26,7 +26,7 @@ function WorksheetForm({ onSubmit }) {
     <Card className="p-6">
       <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center">
         <Plus size={20} className="mr-2" />
-        Create New Worksheet
+        Create New Assignment
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-5">

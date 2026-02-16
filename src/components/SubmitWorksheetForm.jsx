@@ -26,7 +26,7 @@ function SubmitWorksheetForm({ worksheets, onSubmit }) {
 
   return (
     <Card className="p-6">
-      <h3 className="text-lg font-bold text-slate-900 mb-6">Submit Worksheet</h3>
+      <h3 className="text-lg font-bold text-slate-900 mb-6">Submit Assignment</h3>
 
       <div className="space-y-6">
         {/* Worksheet Selection */}

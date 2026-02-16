@@ -55,7 +55,7 @@ function TeacherPanel({ worksheets, addWorksheet, submissions, resolveDispute, r
     setLatestWorksheetId(newWorksheet.id);
     
     // Show success message
-    setSuccessMessage(`"${data.title}" worksheet created successfully!`);
+    setSuccessMessage(`"${data.title}" assignment created successfully!`);
     setShowSuccess(true);
     
     // Auto-hide after 5 seconds
@@ -67,8 +67,8 @@ function TeacherPanel({ worksheets, addWorksheet, submissions, resolveDispute, r
   };
 
   const tabs = [
-    { id: 'create', label: 'Create Worksheet', icon: Plus },
-    { id: 'manage', label: 'Manage Worksheets', icon: BookOpen },
+    { id: 'create', label: 'Create Assignment', icon: Plus },
+    { id: 'manage', label: 'Manage Assignments', icon: BookOpen },
     { id: 'disputes', label: 'Dispute Inbox', icon: AlertTriangle },
     { id: 'settings', label: 'AI Settings', icon: Settings }
   ];

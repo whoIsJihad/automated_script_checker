@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CheckCircle2, FileText, Calendar, AlertTriangle, Clock, ChevronDown, ChevronUp } from 'lucide-react';
+import { CheckCircle2, FileText, Calendar, AlertTriangle, Clock, ChevronDown, ChevronUp, MessageSquare, Eye } from 'lucide-react';
 import { Card, Button, Badge, EmptyState } from './UI';
 import WorksheetDetails from './WorksheetDetails';
 
@@ -7,6 +7,7 @@ function SubmissionsList({ submissions, worksheets, onDispute }) {
   const [expandedCards, setExpandedCards] = useState(new Set());
   const [selectedWorksheet, setSelectedWorksheet] = useState(null);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
+  const [activeCard, setActiveCard] = useState(null); // For showing complaint/works boxes
 
   const toggleCardExpansion = (submissionId) => {
     setExpandedCards(prev => {
@@ -47,7 +48,7 @@ function SubmissionsList({ submissions, worksheets, onDispute }) {
         <EmptyState
           icon={FileText}
           title="No submissions yet"
-          description="Submit your first worksheet to get started with AI-powered grading"
+          description="Submit your first assignment to get started with AI-powered grading"
         />
       </Card>
     );
@@ -61,11 +62,11 @@ function SubmissionsList({ submissions, worksheets, onDispute }) {
         const StatusIcon = statusConfig.icon;
 
         return (
-          <div onClick={worksheet ? () => openWorksheetDetails(worksheet) : undefined} className="cursor-pointer">
-            <Card 
-              key={sub.id} 
-              className="p-6 transition-all duration-200"
-            >
+          <div key={sub.id} className="space-y-4">
+            <div onClick={() => setActiveCard(activeCard === sub.id ? null : sub.id)} className="cursor-pointer">
+              <Card 
+                className="p-6 transition-all duration-200"
+              >
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
@@ -156,6 +157,60 @@ function SubmissionsList({ submissions, worksheets, onDispute }) {
               </div>
             )}
           </Card>
+          </div>
+          
+          {/* Complaint and Works Display Boxes */}
+          {activeCard === sub.id && (
+            <div className="mt-4 space-y-4 animate-in slide-in-from-top-2 duration-300">
+              {/* Complaint Submission Box */}
+              <Card className="p-4 border-l-4 border-red-500 bg-red-50">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-red-100 rounded-lg">
+                    <MessageSquare size={16} className="text-red-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-red-900 mb-2">Submit Complaint</h4>
+                    <p className="text-sm text-red-700 mb-3">Report an issue with your assignment grading or feedback</p>
+                    <Button 
+                      size="sm" 
+                      variant="danger" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onDispute(sub);
+                      }}
+                    >
+                      <MessageSquare size={14} className="inline mr-1.5" />
+                      File Complaint
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+              
+              {/* Works Display Box */}
+              <Card className="p-4 border-l-4 border-blue-500 bg-blue-50">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Eye size={16} className="text-blue-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-blue-900 mb-2">View Your Work</h4>
+                    <p className="text-sm text-blue-700 mb-3">Review your submitted assignment and AI analysis</p>
+                    <Button 
+                      size="sm" 
+                      variant="primary" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openWorksheetDetails(worksheet);
+                      }}
+                    >
+                      <Eye size={14} className="inline mr-1.5" />
+                      View Details
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          )}
           </div>
         );
       })}

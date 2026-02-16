@@ -269,10 +269,10 @@ const initialWorksheets = [
 ];
 
 const initialSubmissions = [
-  // Alice's submissions
+  // Nafees's submissions
   {
     id: 1,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 1,
     status: 'Pending',
     score: null,
@@ -281,14 +281,14 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-15T14:30:00Z',
-    fileUrl: 'alice_physics_submission.pdf',
+    fileUrl: 'nafees_physics_submission.pdf',
     timeSpent: 45,
     attempts: 1,
     detailedFeedback: null
   },
   {
     id: 2,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 2,
     status: 'Disputed',
     score: 70,
@@ -297,7 +297,7 @@ const initialSubmissions = [
     disputeReason: 'The AI missed key dates in the timeline.',
     teacherOverride: null,
     submittedDate: '2024-02-12T10:15:00Z',
-    fileUrl: 'alice_history_submission.pdf',
+    fileUrl: 'nafees_history_submission.pdf',
     timeSpent: 60,
     attempts: 2,
     detailedFeedback: {
@@ -308,7 +308,7 @@ const initialSubmissions = [
   },
   {
     id: 3,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 4,
     status: 'Graded',
     score: 92,
@@ -317,7 +317,7 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-10T16:45:00Z',
-    fileUrl: 'alice_biology_submission.pdf',
+    fileUrl: 'nafees_biology_submission.pdf',
     timeSpent: 75,
     attempts: 1,
     detailedFeedback: {
@@ -328,7 +328,7 @@ const initialSubmissions = [
   },
   {
     id: 4,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 7,
     status: 'Graded',
     score: 88,
@@ -337,7 +337,7 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-08T13:20:00Z',
-    fileUrl: 'alice_coding_submission.zip',
+    fileUrl: 'nafees_coding_submission.zip',
     timeSpent: 90,
     attempts: 1,
     detailedFeedback: {
@@ -347,10 +347,10 @@ const initialSubmissions = [
     }
   },
 
-  // Bob's submissions
+  // Rubab's submissions
   {
     id: 5,
-    studentName: 'Bob',
+    studentName: 'Rubab',
     worksheetId: 1,
     status: 'Graded',
     score: 85,
@@ -359,7 +359,7 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-14T11:00:00Z',
-    fileUrl: 'bob_physics_submission.pdf',
+    fileUrl: 'rubab_physics_submission.pdf',
     timeSpent: 55,
     attempts: 1,
     detailedFeedback: {
@@ -370,7 +370,7 @@ const initialSubmissions = [
   },
   {
     id: 6,
-    studentName: 'Bob',
+    studentName: 'Rubab',
     worksheetId: 3,
     status: 'Graded',
     score: 78,
@@ -379,7 +379,7 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-11T15:30:00Z',
-    fileUrl: 'bob_physics2_submission.pdf',
+    fileUrl: 'rubab_physics2_submission.pdf',
     timeSpent: 65,
     attempts: 1,
     detailedFeedback: {
@@ -390,7 +390,7 @@ const initialSubmissions = [
   },
   {
     id: 7,
-    studentName: 'Bob',
+    studentName: 'Rubab',
     worksheetId: 5,
     status: 'Pending',
     score: null,
@@ -399,14 +399,14 @@ const initialSubmissions = [
     disputeReason: '',
     teacherOverride: null,
     submittedDate: '2024-02-16T09:45:00Z',
-    fileUrl: 'bob_chemistry_submission.pdf',
+    fileUrl: 'rubab_chemistry_submission.pdf',
     timeSpent: 40,
     attempts: 1,
     detailedFeedback: null
   },
   {
     id: 8,
-    studentName: 'Bob',
+    studentName: 'Rubab',
     worksheetId: 8,
     status: 'Graded',
     score: 91,
@@ -416,10 +416,10 @@ const initialSubmissions = [
     teacherOverride: null
   },
 
-  // Charlie's submissions
+  // Tamzeed's submissions
   {
     id: 9,
-    studentName: 'Charlie',
+    studentName: 'Tamzeed',
     worksheetId: 3,
     status: 'Pending',
     score: null,
@@ -430,7 +430,7 @@ const initialSubmissions = [
   },
   {
     id: 10,
-    studentName: 'Charlie',
+    studentName: 'Tamzeed',
     worksheetId: 6,
     status: 'Graded',
     score: 65,
@@ -441,7 +441,7 @@ const initialSubmissions = [
   },
   {
     id: 11,
-    studentName: 'Charlie',
+    studentName: 'Tamzeed',
     worksheetId: 9,
     status: 'Disputed',
     score: 72,
@@ -451,10 +451,10 @@ const initialSubmissions = [
     teacherOverride: null
   },
 
-  // David's submissions
+  // Amit's submissions
   {
     id: 12,
-    studentName: 'David',
+    studentName: 'Amit',
     worksheetId: 4,
     status: 'Graded',
     score: 95,
@@ -465,7 +465,7 @@ const initialSubmissions = [
   },
   {
     id: 13,
-    studentName: 'David',
+    studentName: 'Amit',
     worksheetId: 7,
     status: 'Graded',
     score: 89,
@@ -476,7 +476,7 @@ const initialSubmissions = [
   },
   {
     id: 14,
-    studentName: 'David',
+    studentName: 'Amit',
     worksheetId: 10,
     status: 'Pending',
     score: null,
@@ -486,10 +486,10 @@ const initialSubmissions = [
     teacherOverride: null
   },
 
-  // Emma's submissions
+  // Sara's submissions
   {
     id: 15,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 5,
     status: 'Graded',
     score: 82,
@@ -500,7 +500,7 @@ const initialSubmissions = [
   },
   {
     id: 16,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 8,
     status: 'Graded',
     score: 87,
@@ -511,7 +511,7 @@ const initialSubmissions = [
   },
   {
     id: 17,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 11,
     status: 'Pending',
     score: null,
@@ -524,7 +524,7 @@ const initialSubmissions = [
   // Frank's submissions
   {
     id: 18,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 1,
     status: 'Graded',
     score: 76,
@@ -535,7 +535,7 @@ const initialSubmissions = [
   },
   {
     id: 19,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 6,
     status: 'Graded',
     score: 83,
@@ -546,7 +546,7 @@ const initialSubmissions = [
   },
   {
     id: 20,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 12,
     status: 'Pending',
     score: null,
@@ -559,7 +559,7 @@ const initialSubmissions = [
   // Grace's submissions
   {
     id: 21,
-    studentName: 'Grace',
+    studentName: 'Rubab',
     worksheetId: 3,
     status: 'Graded',
     score: 94,
@@ -570,7 +570,7 @@ const initialSubmissions = [
   },
   {
     id: 22,
-    studentName: 'Grace',
+    studentName: 'Rubab',
     worksheetId: 9,
     status: 'Graded',
     score: 90,
@@ -580,10 +580,10 @@ const initialSubmissions = [
     teacherOverride: null
   },
 
-  // Henry's submissions
+  // Tamzeed's submissions
   {
     id: 23,
-    studentName: 'Henry',
+    studentName: 'Tamzeed',
     worksheetId: 7,
     status: 'Graded',
     score: 67,
@@ -594,7 +594,7 @@ const initialSubmissions = [
   },
   {
     id: 24,
-    studentName: 'Henry',
+    studentName: 'Tamzeed',
     worksheetId: 10,
     status: 'Graded',
     score: 73,
@@ -631,7 +631,7 @@ const initialSubmissions = [
   // Additional detailed evaluations for better demo
   {
     id: 27,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 11,
     status: 'Graded',
     score: 96,
@@ -642,7 +642,7 @@ const initialSubmissions = [
   },
   {
     id: 28,
-    studentName: 'Bob',
+    studentName: 'Amit',
     worksheetId: 11,
     status: 'Graded',
     score: 79,
@@ -653,7 +653,7 @@ const initialSubmissions = [
   },
   {
     id: 29,
-    studentName: 'Charlie',
+    studentName: 'Kamal',
     worksheetId: 11,
     status: 'Graded',
     score: 68,
@@ -664,7 +664,7 @@ const initialSubmissions = [
   },
   {
     id: 30,
-    studentName: 'David',
+    studentName: 'Rahim',
     worksheetId: 12,
     status: 'Graded',
     score: 93,
@@ -675,7 +675,7 @@ const initialSubmissions = [
   },
   {
     id: 31,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 12,
     status: 'Graded',
     score: 84,
@@ -686,7 +686,7 @@ const initialSubmissions = [
   },
   {
     id: 32,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 5,
     status: 'Graded',
     score: 71,
@@ -697,7 +697,7 @@ const initialSubmissions = [
   },
   {
     id: 33,
-    studentName: 'Grace',
+    studentName: 'Rubab',
     worksheetId: 7,
     status: 'Graded',
     score: 97,
@@ -708,7 +708,7 @@ const initialSubmissions = [
   },
   {
     id: 34,
-    studentName: 'Henry',
+    studentName: 'Tamzeed',
     worksheetId: 8,
     status: 'Graded',
     score: 75,
@@ -730,7 +730,7 @@ const initialSubmissions = [
   },
   {
     id: 36,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 8,
     status: 'Graded',
     score: 89,
@@ -741,7 +741,7 @@ const initialSubmissions = [
   },
   {
     id: 37,
-    studentName: 'Bob',
+    studentName: 'Amit',
     worksheetId: 4,
     status: 'Graded',
     score: 82,
@@ -752,7 +752,7 @@ const initialSubmissions = [
   },
   {
     id: 38,
-    studentName: 'Charlie',
+    studentName: 'Kamal',
     worksheetId: 5,
     status: 'Graded',
     score: 69,
@@ -763,7 +763,7 @@ const initialSubmissions = [
   },
   {
     id: 39,
-    studentName: 'David',
+    studentName: 'Rahim',
     worksheetId: 3,
     status: 'Graded',
     score: 91,
@@ -774,7 +774,7 @@ const initialSubmissions = [
   },
   {
     id: 40,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 7,
     status: 'Graded',
     score: 85,
@@ -785,7 +785,7 @@ const initialSubmissions = [
   },
   {
     id: 41,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 8,
     status: 'Graded',
     score: 78,
@@ -796,7 +796,7 @@ const initialSubmissions = [
   },
   {
     id: 42,
-    studentName: 'Grace',
+    studentName: 'Rubab',
     worksheetId: 12,
     status: 'Graded',
     score: 95,
@@ -807,7 +807,7 @@ const initialSubmissions = [
   },
   {
     id: 43,
-    studentName: 'Henry',
+    studentName: 'Tamzeed',
     worksheetId: 4,
     status: 'Graded',
     score: 72,
@@ -829,7 +829,7 @@ const initialSubmissions = [
   },
   {
     id: 45,
-    studentName: 'Alice',
+    studentName: 'Nafees',
     worksheetId: 10,
     status: 'Graded',
     score: 90,
@@ -840,7 +840,7 @@ const initialSubmissions = [
   },
   {
     id: 46,
-    studentName: 'Bob',
+    studentName: 'Amit',
     worksheetId: 12,
     status: 'Graded',
     score: 80,
@@ -851,7 +851,7 @@ const initialSubmissions = [
   },
   {
     id: 47,
-    studentName: 'Charlie',
+    studentName: 'Kamal',
     worksheetId: 7,
     status: 'Graded',
     score: 64,
@@ -862,7 +862,7 @@ const initialSubmissions = [
   },
   {
     id: 48,
-    studentName: 'David',
+    studentName: 'Rahim',
     worksheetId: 5,
     status: 'Graded',
     score: 94,
@@ -873,7 +873,7 @@ const initialSubmissions = [
   },
   {
     id: 49,
-    studentName: 'Emma',
+    studentName: 'Sara',
     worksheetId: 3,
     status: 'Graded',
     score: 83,
@@ -884,7 +884,7 @@ const initialSubmissions = [
   },
   {
     id: 50,
-    studentName: 'Frank',
+    studentName: 'Fahim',
     worksheetId: 4,
     status: 'Graded',
     score: 77,
@@ -917,7 +917,7 @@ export const useMockData = () => {
       {
         timestamp: '2024-02-10T14:30:00Z',
         submissionId: 3,
-        studentName: 'Alice',
+        studentName: 'Nafees',
         worksheetId: 2,
         subject: 'History',
         llmUsed: 'Gemini 1.5',
@@ -928,7 +928,7 @@ export const useMockData = () => {
       {
         timestamp: '2024-02-12T09:15:00Z',
         submissionId: 11,
-        studentName: 'Charlie',
+        studentName: 'Kamal',
         worksheetId: 9,
         subject: 'Art',
         llmUsed: 'Gemini 1.5',
@@ -939,7 +939,7 @@ export const useMockData = () => {
       {
         timestamp: '2024-02-14T16:45:00Z',
         submissionId: 23,
-        studentName: 'Henry',
+        studentName: 'Tamzeed',
         worksheetId: 7,
         subject: 'Computer Science',
         llmUsed: 'Claude 3',
@@ -1016,7 +1016,7 @@ export const useMockData = () => {
   // Function to get submissions based on role
   // For teacher: all submissions
   // For student: only their own (assuming studentName is 'Alice' for demo)
-  const getSubmissionsForRole = (role, studentName = 'Alice') => {
+  const getSubmissionsForRole = (role, studentName = 'Nafees') => {
     if (role === 'teacher') {
       return submissions;
     }

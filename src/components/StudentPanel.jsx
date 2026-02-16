@@ -34,7 +34,7 @@ function StudentPanel({ worksheets, submissions, addSubmission, disputeSubmissio
     );
   });
 
-  // Filter submissions based on search query
+  // Filter submissions based on search query (submissions are already filtered by student in parent)
   const filteredSubmissions = submissions.filter(sub => {
     if (!searchQuery) return true;
     
@@ -64,7 +64,7 @@ function StudentPanel({ worksheets, submissions, addSubmission, disputeSubmissio
       }, 1000);
       const timeout = setTimeout(() => {
         const newSubmission = {
-          studentName: 'Alice Johnson',
+          studentName: 'Nafees',
           worksheetId: parseInt(formData.selectedWorksheet),
           status: 'Pending',
           score: Math.floor(Math.random() * 100) + 1,
@@ -114,10 +114,10 @@ function StudentPanel({ worksheets, submissions, addSubmission, disputeSubmissio
           </div>
         </div>
         <h2 className="text-2xl font-bold text-slate-900 mb-2">Submission Successful!</h2>
-        <p className="text-slate-600 mb-1">Worksheet submitted at {new Date().toLocaleString()}</p>
+        <p className="text-slate-600 mb-1">Assignment submitted at {new Date().toLocaleString()}</p>
         <p className="text-lg font-semibold text-slate-900 mb-6">Estimated Score: <span className="text-indigo-600">{submittedData.score}/100</span></p>
         <Button onClick={reset} variant="primary">
-          Submit Another Worksheet
+          Submit Another Assignment
         </Button>
       </Card>
     );
@@ -171,7 +171,7 @@ function StudentPanel({ worksheets, submissions, addSubmission, disputeSubmissio
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left - Submissions */}
         <div className="lg:col-span-2">
-          <SectionHeader title="Your Submissions" description="View and manage all your submitted worksheets" />
+          <SectionHeader title="Your Submissions" description="View and manage all your submitted assignments" />
           <SubmissionsList submissions={filteredSubmissions} worksheets={filteredWorksheets} onDispute={handleDispute} />
         </div>
 

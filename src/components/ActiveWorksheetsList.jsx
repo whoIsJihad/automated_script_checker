@@ -24,8 +24,8 @@ function ActiveWorksheetsList({ worksheets, submissions, latestWorksheetId }) {
       <Card className="p-8">
         <EmptyState
           icon={BookOpen}
-          title="No active worksheets"
-          description="Create your first worksheet to get started"
+          title="No active assignments"
+          description="Create your first assignment to get started"
         />
       </Card>
     );
